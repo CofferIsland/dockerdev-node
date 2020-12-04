@@ -1,0 +1,21 @@
+version: "3"
+
+services:
+  api:
+    build: .
+    ports:
+      - "4000:4000"
+    command: yarn dev
+    volumes:
+      - .:/usr/app
+
+  db:
+    container_name: postgres
+    image: postgres
+    restart: always
+    volumes:
+      - ./db:/var/lib/postgresql/data
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: 1234
+      POSTGRES_DB: dev

@@ -1,0 +1,12 @@
+{
+  "name": "dev-docker",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon --legacy-watch --delay 1000ms src/index.js"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  }
+}
